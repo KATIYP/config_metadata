@@ -1,0 +1,126 @@
+database_name: VAW_AMER_DESIGN
+schema_name: USROICDIF
+project_key_name: USROICDIF
+tables:
+- name: TASK_MASTER
+  columns:
+      - name: TASK_ID
+        type: NUMBER(38,0)
+      - name: TASK_TYPE
+        type: VARCHAR(255)
+      - name: TASK_DESC
+        type: VARCHAR(1500)
+      - name: ACTIVE_FLAG
+        type: VARCHAR(1)
+      - name: TASK_AREA
+        type: VARCHAR(50)
+      - name: REC_INSERT_DTTM
+        type: TIMESTAMP_NTZ(9)
+      - name: REC_UPDATE_DTTM
+        type: TIMESTAMP_NTZ(9)
+        
+- name: FILE_MASTER
+  columns:
+      - name: TASK_ID
+        type: NUMBER(38,0)
+      - name: FILE_MSTR_ID
+        type: NUMBER(38,0)
+      - name: FILE_NAME
+        type: VARCHAR(250)
+      - name: SRC_SYS
+        type: VARCHAR(250)
+      - name: SRC_OBJ_NM
+        type: VARCHAR(250)
+      - name: SRC_OBJ_TYP
+        type: VARCHAR(250)
+      - name: FILE_EXTENSION
+        type: VARCHAR(250)
+      - name: FILE_DELIMITER
+        type: VARCHAR(250)
+      - name: PATTERN_MATCH_ENABLED
+        type: VARCHAR(3)
+      - name: SRC_STORAGE_TYPE
+        type: VARCHAR(250)
+      - name: SRC_LOCATION
+        type: VARCHAR(2500)
+      - name: SRC_LOCATION_OWNER
+        type: VARCHAR(250)
+      - name: VENDOR_NM
+        type: VARCHAR(250)
+      - name: FILE_HEADER_AVLB
+        type: VARCHAR(250)
+      - name: ARCHIVE_REQUIRED
+        type: VARCHAR(250)
+      - name: ARCHIVE_LOCATION
+        type: VARCHAR(2500)
+      - name: DOMAIN
+        type: VARCHAR(250)
+      - name: SUB_DOMAIN
+        type: VARCHAR(250)
+      - name: ACTIVE_FLAG
+        type: VARCHAR(1)
+      - name: PATTERN_TYPE
+        type: VARCHAR(10)
+      - name: FREQUENCY
+        type: VARCHAR(1)
+      - name: REC_INSERT_DTTM
+        type: TIMESTAMP_NTZ(9)
+      - name: REC_UPDATE_DTTM
+        type: TIMESTAMP_NTZ(9)
+      - name: EXTRA_COLUMNS_REQUIRED
+        type: VARCHAR(1)
+      - name: EXTRA_COLUMN_NAME
+        type: VARCHAR(16777216)
+      - name: EXTRA_COLUMN_VALUE
+        type: VARCHAR(16777216)
+
+- name: DB_MASTER
+  columns:
+      - name: TASK_ID
+        type: NUMBER(38,0)
+      - name: DB_MSTR_ID
+        type: NUMBER(38,0)
+      - name: SRC_OBJ_NM
+        type: VARCHAR(16777216)
+      - name: TGT_OBJ_NM
+        type: VARCHAR(16777216)
+      - name: SRC_OBJ_GIT_LOC
+        type: VARCHAR(16777216)
+      - name: ACTIVE_FLAG
+        type: VARCHAR(1)
+      - name: LOAD_TYPE
+        type: VARCHAR(1)
+      - name: FREQUENCY
+        type: VARCHAR(1)
+      - name: DOMAIN
+        type: VARCHAR(100)
+      - name: SUB_DOMAIN
+        type: VARCHAR(100)
+      - name: REC_INSERT_DTTM
+        type: TIMESTAMP_NTZ(9)
+      - name: REC_UPDATE_DTTM
+        type: TIMESTAMP_NTZ(9)
+
+- name: STANDARDIZATION_MASTER
+  columns:
+      - name: STND_MSTR_ID
+        type: NUMBER(38,0)
+      - name: SRC_OBJ_LIST
+        type: VARCHAR(10000)
+      - name: INPUT_STND_COL_KEYS
+        type: VARCHAR(10000)
+      - name: ACTIVE_FLAG
+        type: VARCHAR(1)
+      - name: INPUT_STND_TYPE
+        type: VARCHAR(100)
+      - name: CUSTOM_SQL
+        type: VARCHAR(16777216)
+      - name: REC_INSERT_DATETIME
+        type: TIMESTAMP_NTZ(9)
+      - name: REC_UPDATE_DATETIME
+        type: TIMESTAMP_NTZ(9)
+      - name: TGT_OBJ_LIST
+        type: VARCHAR(10000)
+      - name: COL_NOT_REQ
+        type: VARCHAR(10000)
+
